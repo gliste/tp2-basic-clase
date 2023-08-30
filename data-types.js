@@ -23,7 +23,7 @@ let nombre = "Pedro";
 let saludo3 = `Hola mundo: ${nombre} bienvenido`; //backtick: se utiliza para incorporar dentro de una cadena una variable y evitar las concatenaciones
 //entonces permite utilizar el símbolo $ entre {} que indica una "expresión". Incluye un salto de línea
 //backtick Alt+96
-let pizza; //consultar
+let pizza = '🍕'//tecla windows+:
 
 //Null: representa la ausencia de algún valor
 let nulo = 45;
@@ -49,5 +49,6 @@ let empleado1 = {Nombre: "Julian", Apellido: "Alvarez", Edad:28};
 console.log(`Nombre del empleado: ${empleado.Nombre}`);
 //Segundo Acceso a las propiedades del objeto
 console.log(`Edad del empleado: ${empleado["Edad"]}`);
+
 
 
