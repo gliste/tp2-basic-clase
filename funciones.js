@@ -34,7 +34,7 @@ console.log(micallback(square));
 //    return a + b;
 //}
 
-//con al Arrow function la función anterior quedaría de la siguiente manera: 
+//con el Arrow function la función anterior quedaría de la siguiente manera: 
 //se elimina la palabra "function" al tener UNA sola línea dentro del cuerpo de la función NO
 //se necesitan las llaves {} ni Return
 const getSum = (a,b) => a + b;
