@@ -47,15 +47,13 @@ const inventors = [
 
 //1. utilización de métodos para ajustar el texto a un tamaño determinado
 function print(inventors) {
+  console.log(inventors);
   console.log("Nombre    Apellido       Año");
   console.log("============================");
-  inventors.forEach((inventor) =>
+  inventors.forEach((inventor) => {
     console.log(
-      `${inventor.first.padEnd(12, " ")}${inventor.last.padEnd(12, " ")} ${
-        inventor.year
-      }`
-    )
-  );
+      `${inventor.first.padEnd(12, " ")}${inventor.last.padEnd(12, " ")} ${inventor.year}`);
+  });
 }
 
 //print(inventors);
@@ -131,17 +129,18 @@ console.log(inventors.every((inventor) => inventor.year > 1500));
 //Ordenamiento por burbujeo ver apuntes
 //se utiliza el método sort() para definir la logica entre objetos
 //en este caso ordena ascendentemente
-
-print(inventors.sort((a, b) => a.year - b.year));
+console.log(inventors);
+//print(inventors.sort((a, b) => a.year - b.year));
 
 //para ordenar String es de la siguiente manera
 
-print(
-  inventor.sort((a, b) => {
-    if (a.last > b.last) {
-      return -1;
-    } else {
-      return 1;
-    }
-  })
-);
+//revisar
+// print(
+//   inventors.sort((a, b) => {
+//     if (a.last > b.last) {
+//       return -1;
+//     } else {
+//       return 1;
+//     }
+//   })
+// );
