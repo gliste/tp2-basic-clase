@@ -49,10 +49,28 @@ function addUser(user){
 }
 //actualiza información del objeto
 function updateUser(user){
+    //como dentro del usuario esta el id, traigo primero a TODOS los usuarios
+    const users = getUsers();
+    //obtengo el índice del usuario que se desea modificar
+    const index = users.findIndex(userVar => user._id == user._id);
+    //con el indice ya obtenido lo asigno a posición en el array de objetos 
+    users[index] = user;
+    //finalmente se escribe en el archivo
+    fs.writeFileSync(PATH_USERJSON, JSON.stringify(users, null, " "));
+
 
 }
 //elimina el objeto
 function deleteUser(id){
+    //Paso 1. traer los usuarios
+    const users = getUser
+    //Paso 2. encontrar al usuario que hay que eliminar
+    //Paso 3. eliminar al usuario del array
+    //la función .splice() que recibe el índice permite hacer el paso 2 y el 3
+    users.splice(users.findIndex(user => user._id == id), 1);
+    //Paso 4. almacenar/escritura al array con el usuario eliminado
+    fs.writeFileSync(PATH_USERJSON, JSON.stringify(users, null, " "));
+
 
 }
 //como estas funciones se utilizaran por fuera de este archivo se deben 
