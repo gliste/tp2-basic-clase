@@ -3,7 +3,8 @@
 //lo definimos con la declarción de la constante fs.
 //tambien se necesitará un path
 
-const fs = require('fs');
+const fs = require('fs'); //import con el type Module
+const bcrypt = require('bcrypt'); //luego de la instalación se manipula como cualquier otro módulo de Node
 const PATH_USERJSON = "../data/users.json"; //la sintaxis para llegar a la ubicación. Los puntitos indican
 //subir de nivel
 
@@ -36,6 +37,11 @@ function addUser(user){
     user._id = Date.now().toString(36) + Math.random().toString(36).substring(2);
     //como se deben leer los usuarios entonces los traigo
     const users = getUser();
+    //antes de incorporarlo al array hasheo la pass
+    user.password = bcrypt.hashSync(user.password, 10); //aquí se hashea
+    //bcrypt.compareSync('password', "password almacenado") //aquí se comparan los hash
+
+
     users.push(user); 
     //para persistirlo en el archivo utilizo la función writeFileSync(). Que recibe la ubicación
     //PATH_USERJSON y que se va a escribir. Como se recibe un array de objetos json, se debe convertir
