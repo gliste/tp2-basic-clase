@@ -33,7 +33,7 @@ import { readFile } from "fs";
 //version sincrona
 const PATH_USERJSON = "../data/users.json";
 //let texto = fs.readFileSync(PATH_USERJSON, 'utf-8');
-let inventores = JSON.parse(inventores);
-console.log(inventores);
+let inventors = JSON.parse(inventors);
+console.log(inventors);
 
 
