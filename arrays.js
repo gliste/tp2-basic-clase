@@ -1,32 +1,32 @@
 // declaración de arrays
 //let nombresVarios = ['Pedro','Juan', 'Maria', s];
-let nombres = ['Pedro', 'Juan','Maria'];
+let nombres = ['Pedro', 'Juan', 'Maria'];
 
 //iteradores para recorrer la estructura
 
-for (let index = 0; index < nombre.length; index++){
-const element = nombres[index];
-console.log(element);
+for (let index = 0; index < nombre.length; index++) {
+    const element = nombres[index];
+    console.log(element);
 }
 
 nombres.forEach((nombre) => {
     console.log(nombre);
 });
 //forma abreviada del foreach ya que hay UN solo parámetro y UNA sola línea
-nombres.forEach (nombre => console.log(nombre));
+nombres.forEach(nombre => console.log(nombre));
 
 //la forma larga sería la siguiente; es decir; es lo mismo que la opción abreviada.
-const mifuncioncallback = function (nombre){
+const mifuncioncallback = function (nombre) {
     console.log(nombre);
 }
 
-nombre.forEach(mifuncioncallback);
+nombres.forEach(mifuncioncallback);
 
 //forin
 for (const key in object) {
     if (Object.hasOwnProperty.call(object, key)) {
         const element = object[key];
-        
+
     }
 }
 //Funciones que modifican al array

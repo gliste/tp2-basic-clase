@@ -12,7 +12,7 @@ const usersData = require("./usersData.js"); //tener en cuenta la sintaxis ya qu
 //     password: '$2b$12$NpElja7NerH/Vz.6pN0vV.7PNo1fOvMgFx0O8VOro6idM4Evn7n4G'
 //   }));
 
-console.log(userData.addUser({
+console.log(usersData.addUser({
     name: 'Gabriela',
     email: 'gabriela@jmail.com.ar',
     password: 'password1234567'
@@ -20,7 +20,7 @@ console.log(userData.addUser({
 
 //luego que agregue el user Gabriela, ejecutar este cambio
 // console.log(userData.addUser({
-        //falta _id: ''
+//falta _id: ''
 //     "name": "Gabriela",
 //     "email": "gabrielaPepita@kmail.com.ar",
 //     "password": "$2b$12$NpElja7NerH/Vz.6pN0vV.7PNo1fOvMgFx0O8VOro6idM4Evn7n4G"
